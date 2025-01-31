@@ -7,6 +7,7 @@ export interface Website {
   created_at: string;
   updated_at: string;
   user_id: string;
+  display_order?: number;
 }
 
-export type WebsiteBasicData = Pick<Website, 'id' | 'title' | 'url' | 'category' | 'favicon_url'>;
+export type WebsiteBasicData = Pick<Website, 'id' | 'title' | 'url' | 'category' | 'favicon_url' | 'display_order'>;

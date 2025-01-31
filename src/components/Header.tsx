@@ -26,7 +26,15 @@ export function Header({
             <h1 className="text-3xl font-bold text-gray-900">AI Tools & Websites</h1>
             <p className="text-gray-600 mt-1">by: Mohamed AIT MOUS</p>
           </div>
-          <div>
+          <div className="flex items-center space-x-3">
+            <a
+              href="https://fxtrader016.github.io/mkDownToWord/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
+            >
+              تعديل النص
+            </a>
             {!isAdmin ? (
               <form onSubmit={onAdminLogin} className="flex space-x-2">
                 <input

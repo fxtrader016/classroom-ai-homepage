@@ -15,24 +15,24 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
       href={website.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${styles} h-24 p-6 rounded-lg transition-transform hover:scale-105 flex items-center space-x-4`}
+      className={`${styles} h-32 p-4 rounded-lg transition-transform hover:scale-105 flex flex-col items-center justify-center text-center`}
     >
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 mb-2">
         <img
           src={website.favicon_url || `${new URL(website.url).origin}/favicon.ico`}
           alt=""
-          className="w-6 h-6"
+          className="w-12 h-12"
           onError={(e) => {
             e.currentTarget.onerror = null;
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling?.classList.remove('hidden');
           }}
         />
-        <Globe className="w-6 h-6 hidden" />
+        <Globe className="w-12 h-12 hidden" />
       </div>
-      <span className="font-semibold truncate">{website.title}</span>
+      <span className="font-semibold text-base leading-tight line-clamp-2 max-w-[90%]">{website.title}</span>
       {website.category === 'not_working' && (
-        <X className="w-4 h-4 text-red-500 absolute bottom-2 right-2" />
+        <X className="w-6 h-6 text-red-500 absolute bottom-2 right-2" />
       )}
     </a>
   );
