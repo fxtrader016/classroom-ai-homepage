@@ -28,12 +28,12 @@ export function Header({
           </div>
           <div className="flex items-center space-x-3">
             <a
-              href="https://fxtrader016.github.io/mkDownToWord/"
+              href="https://lustrous-lily-6afd8b.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
             >
-              تعديل النص
+              مستكشف المهن
             </a>
             {!isAdmin ? (
               <form onSubmit={onAdminLogin} className="flex space-x-2">
